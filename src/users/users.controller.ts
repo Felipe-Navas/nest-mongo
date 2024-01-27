@@ -12,12 +12,12 @@ import { UserDto } from 'src/dto';
 
 @Controller('users')
 export class UsersController {
-  constructor(private userService: UsersService) {}
+  constructor(private usersService: UsersService) {}
 
   @Get()
   async findOne(@Body() body: UserDto) {
     const { userName, password } = body;
-    const user = await this.userService.findOne(userName);
+    const user = await this.usersService.findOne(userName);
     if (!user) throw new NotFoundException('User not found');
     if (user?.password !== password)
       throw new UnauthorizedException('Password not valid');
@@ -28,7 +28,7 @@ export class UsersController {
   @Post()
   async create(@Body() body: UserDto) {
     try {
-      return await this.userService.create(body);
+      return await this.usersService.create(body);
     } catch (error) {
       if (error.code === 11000) {
         throw new ConflictException('User already exists');
