@@ -3,11 +3,15 @@ import {
   NotFoundException,
   UnauthorizedException,
 } from '@nestjs/common';
+import { JwtService } from '@nestjs/jwt';
 import { UsersService } from 'src/users/users.service';
 
 @Injectable()
 export class AuthService {
-  constructor(private usersService: UsersService) {}
+  constructor(
+    private usersService: UsersService,
+    private jwtService: JwtService,
+  ) {}
 
   async signIn(userName: string, pass: string) {
     const user = await this.usersService.findOne(userName);
@@ -16,9 +20,9 @@ export class AuthService {
     if (user?.password !== pass)
       throw new UnauthorizedException('Password not valid');
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { password, ...result } = user;
-    // TODO: Generate a JWT and return it here instead of the user object
-    return result;
+    const payload = { sub: user._id, userName: user.userName };
+    return {
+      access_token: await this.jwtService.signAsync(payload),
+    };
   }
 }
