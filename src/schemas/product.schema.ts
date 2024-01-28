@@ -13,7 +13,7 @@ export class Product {
   @Prop()
   picture: string;
 
-  @Prop()
+  @Prop({ default: 0 })
   price: number;
 }
 

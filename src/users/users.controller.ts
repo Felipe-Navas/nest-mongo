@@ -9,6 +9,7 @@ import {
 } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { UserDto } from 'src/dto';
+import { Public } from 'src/auth/decorators/public.decorator';
 
 @Controller('users')
 export class UsersController {
@@ -25,6 +26,7 @@ export class UsersController {
     return user;
   }
 
+  @Public()
   @Post()
   async create(@Body() body: UserDto) {
     try {
