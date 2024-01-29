@@ -13,7 +13,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWI2OTE4MDJlYWQxMjQ5M2VmYjY4OTciLCJ1c2VyTmFtZSI6InVzZXIxIiwiaWF0IjoxNzA2NDYzNjIzLCJleHAiOjE3MDY0NzA4MjN9.dFyQtJ35AWsLR3XhmbCibIyrM5AojiHIt9bck46-DuU",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWI1MjE0YTYzZTkyZmE1NGI3OWFkMDQiLCJ1c2VyTmFtZSI6InVzZXIxIiwiaWF0IjoxNzA2NTQzNjY1LCJleHAiOjE3MDY1NTA4NjV9.FuAHCWWw8ZguBaCLwsESUIh-M7FU1ZsHgy17FywHtQs",
 						"type": "text"
 					}
 				],
@@ -37,7 +37,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWI2OTE4MDJlYWQxMjQ5M2VmYjY4OTciLCJ1c2VyTmFtZSI6InVzZXIxIiwiaWF0IjoxNzA2NDYzNjIzLCJleHAiOjE3MDY0NzA4MjN9.dFyQtJ35AWsLR3XhmbCibIyrM5AojiHIt9bck46-DuU",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWI1MjE0YTYzZTkyZmE1NGI3OWFkMDQiLCJ1c2VyTmFtZSI6InVzZXIxIiwiaWF0IjoxNzA2NTQzNjY1LCJleHAiOjE3MDY1NTA4NjV9.FuAHCWWw8ZguBaCLwsESUIh-M7FU1ZsHgy17FywHtQs",
 						"type": "text"
 					}
 				],
@@ -111,7 +111,13 @@
 			"name": "product-update",
 			"request": {
 				"method": "PUT",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWI1MjE0YTYzZTkyZmE1NGI3OWFkMDQiLCJ1c2VyTmFtZSI6InVzZXIxIiwiaWF0IjoxNzA2NTQzNjY1LCJleHAiOjE3MDY1NTA4NjV9.FuAHCWWw8ZguBaCLwsESUIh-M7FU1ZsHgy17FywHtQs",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"name\": \"Producto 2\",\n    \"sku\": \"123\",\n    \"picture\": \"url to image\",\n    \"price\": 45\n}",
@@ -169,7 +175,13 @@
 			},
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWI1MjE0YTYzZTkyZmE1NGI3OWFkMDQiLCJ1c2VyTmFtZSI6InVzZXIxIiwiaWF0IjoxNzA2NTQzNjY1LCJleHAiOjE3MDY1NTA4NjV9.FuAHCWWw8ZguBaCLwsESUIh-M7FU1ZsHgy17FywHtQs",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"userName\": \"user1\",\n    \"password\": \"123\"\n}",
@@ -227,7 +239,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWI1MjE0YTYzZTkyZmE1NGI3OWFkMDQiLCJ1c2VyTmFtZSI6InVzZXIxIiwiaWF0IjoxNzA2MzgxODk5LCJleHAiOjE3MDYzODkwOTl9.4QaKMzMi85J43d13X2deKMCjwi8_wuKzlPz3PR7JO08",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWI1MjE0YTYzZTkyZmE1NGI3OWFkMDQiLCJ1c2VyTmFtZSI6InVzZXIxIiwiaWF0IjoxNzA2NTQzNjY1LCJleHAiOjE3MDY1NTA4NjV9.FuAHCWWw8ZguBaCLwsESUIh-M7FU1ZsHgy17FywHtQs",
 						"type": "text"
 					}
 				],
@@ -322,7 +334,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWI2OTE4MDJlYWQxMjQ5M2VmYjY4OTciLCJ1c2VyTmFtZSI6InVzZXIxIiwiaWF0IjoxNzA2NDYzNjIzLCJleHAiOjE3MDY0NzA4MjN9.dFyQtJ35AWsLR3XhmbCibIyrM5AojiHIt9bck46-DuU",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWI1MjE0YTYzZTkyZmE1NGI3OWFkMDQiLCJ1c2VyTmFtZSI6InVzZXIxIiwiaWF0IjoxNzA2NTQzNjY1LCJleHAiOjE3MDY1NTA4NjV9.FuAHCWWw8ZguBaCLwsESUIh-M7FU1ZsHgy17FywHtQs",
 						"type": "text"
 					}
 				],
@@ -348,7 +360,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWI2OTE4MDJlYWQxMjQ5M2VmYjY4OTciLCJ1c2VyTmFtZSI6InVzZXIxIiwiaWF0IjoxNzA2NDYzNjIzLCJleHAiOjE3MDY0NzA4MjN9.dFyQtJ35AWsLR3XhmbCibIyrM5AojiHIt9bck46-DuU",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWI1MjE0YTYzZTkyZmE1NGI3OWFkMDQiLCJ1c2VyTmFtZSI6InVzZXIxIiwiaWF0IjoxNzA2NTQzNjY1LCJleHAiOjE3MDY1NTA4NjV9.FuAHCWWw8ZguBaCLwsESUIh-M7FU1ZsHgy17FywHtQs",
 						"type": "text"
 					}
 				],
@@ -374,7 +386,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWI2OTE4MDJlYWQxMjQ5M2VmYjY4OTciLCJ1c2VyTmFtZSI6InVzZXIxIiwiaWF0IjoxNzA2NDYzNjIzLCJleHAiOjE3MDY0NzA4MjN9.dFyQtJ35AWsLR3XhmbCibIyrM5AojiHIt9bck46-DuU",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWI1MjE0YTYzZTkyZmE1NGI3OWFkMDQiLCJ1c2VyTmFtZSI6InVzZXIxIiwiaWF0IjoxNzA2NTQzNjY1LCJleHAiOjE3MDY1NTA4NjV9.FuAHCWWw8ZguBaCLwsESUIh-M7FU1ZsHgy17FywHtQs",
 						"type": "text"
 					}
 				],
@@ -386,6 +398,60 @@
 					"port": "3000",
 					"path": [
 						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product-create-file",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWI1MjE0YTYzZTkyZmE1NGI3OWFkMDQiLCJ1c2VyTmFtZSI6InVzZXIxIiwiaWF0IjoxNzA2NTQzNjY1LCJleHAiOjE3MDY1NTA4NjV9.FuAHCWWw8ZguBaCLwsESUIh-M7FU1ZsHgy17FywHtQs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "picture",
+							"contentType": "image/jpeg",
+							"type": "file",
+							"src": "/Users/felipenavas/Desktop/Felipe/Licencia dorso.jpeg"
+						},
+						{
+							"key": "name",
+							"value": "Producto 10",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "sku",
+							"value": "sku number",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "12",
+							"contentType": "application/json",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
 					]
 				}
 			},
