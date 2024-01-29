@@ -4,16 +4,17 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { OrdersModule } from './orders/orders.module';
 import { ProductsModule } from './products/products.module';
 import { UsersModule } from './users/users.module';
+import { mongoDbConnection } from './constants/constants';
+import { GridFsModule } from './gridfs/gridfs.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot(
-      `mongodb://${process.env.DATABASE_HOST || 'localhost'}:27017/nest-mongo`,
-    ),
+    MongooseModule.forRoot(mongoDbConnection),
     AuthModule,
     ProductsModule,
     UsersModule,
     OrdersModule,
+    GridFsModule,
   ],
 })
 export class AppModule {}

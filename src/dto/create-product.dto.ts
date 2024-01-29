@@ -1,4 +1,5 @@
-import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
+import * as mongoose from 'mongoose';
+import { IsNotEmpty, IsString } from 'class-validator';
 
 export class CreateProductDto {
   @IsString()
@@ -8,9 +9,11 @@ export class CreateProductDto {
   @IsString()
   sku: string;
 
-  @IsString()
-  picture: string;
+  picture: {
+    fileId: mongoose.Types.ObjectId;
+    filename: string;
+    originalname: string;
+  };
 
-  @IsNumber()
   price: number;
 }

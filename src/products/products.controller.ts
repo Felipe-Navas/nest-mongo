@@ -9,9 +9,12 @@ import {
   Param,
   Post,
   Put,
+  UploadedFile,
+  UseInterceptors,
 } from '@nestjs/common';
-import { ProductsService } from './products.service';
+import { FileInterceptor } from '@nestjs/platform-express';
 import { CreateProductDto, UpdateProductDto } from 'src/dto';
+import { ProductsService } from './products.service';
 
 @Controller('products')
 export class ProductsController {
@@ -31,9 +34,13 @@ export class ProductsController {
   }
 
   @Post()
-  async create(@Body() body: CreateProductDto) {
+  @UseInterceptors(FileInterceptor('picture'))
+  async create(
+    @Body() body: CreateProductDto,
+    @UploadedFile() picture: Express.Multer.File,
+  ) {
     try {
-      return await this.productsService.create(body);
+      return await this.productsService.create(body, picture);
     } catch (error) {
       if (error.code === 11000) {
         throw new ConflictException('Product already exists');

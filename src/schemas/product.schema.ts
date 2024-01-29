@@ -1,4 +1,5 @@
-import { Schema, Prop, SchemaFactory } from '@nestjs/mongoose';
+import { Schema, Prop, SchemaFactory, raw } from '@nestjs/mongoose';
+import { Types } from 'mongoose';
 
 @Schema({
   timestamps: true,
@@ -10,8 +11,16 @@ export class Product {
   @Prop({ trim: true })
   sku: string;
 
-  @Prop()
-  picture: string;
+  @Prop(
+    raw({
+      fileId: { type: Types.ObjectId, required: true },
+      filename: { type: String, required: true },
+    }),
+  )
+  picture: {
+    fileId: Types.ObjectId;
+    filename: string;
+  };
 
   @Prop({ default: 0 })
   price: number;
