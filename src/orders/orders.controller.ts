@@ -8,9 +8,12 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { CreateOrderDto, UpdateOrderDto } from 'src/dto';
 import { OrdersService } from './orders.service';
 
+@ApiTags('orders')
+@ApiBearerAuth()
 @Controller('orders')
 export class OrdersController {
   constructor(private ordersService: OrdersService) {}

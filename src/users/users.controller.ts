@@ -7,14 +7,17 @@ import {
   Post,
   UnauthorizedException,
 } from '@nestjs/common';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { UsersService } from './users.service';
 import { UserDto } from 'src/dto';
 import { Public } from 'src/auth/decorators/public.decorator';
 
+@ApiTags('users')
 @Controller('users')
 export class UsersController {
   constructor(private usersService: UsersService) {}
 
+  @ApiBearerAuth()
   @Get()
   async findOne(@Body() body: UserDto) {
     const { userName, password } = body;

@@ -1,6 +1,6 @@
 {
   "name": "nest-mongo",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A Nest.js app with mongoDB",
   "author": "Felipe Navas",
   "private": true,
@@ -28,6 +28,7 @@
     "@nestjs/jwt": "^10.2.0",
     "@nestjs/mongoose": "^10.0.2",
     "@nestjs/platform-express": "^10.3.1",
+    "@nestjs/swagger": "^7.3.0",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.1",
     "mongoose": "^8.1.1",
