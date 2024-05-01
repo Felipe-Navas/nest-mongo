@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "A Nest.js app with mongoDB",
   "author": "Felipe Navas",
-  "private": true,
   "main": "./src/main.ts",
   "license": "MIT",
   "scripts": {
